@@ -37,6 +37,10 @@ function App() {
 
   useEffect(() => {
     updateNotesList();
+
+    return () => {
+      setNotes([])
+    }
   }, [])
 
   return (
